@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: ChestCavityForge1.16.5Test2
+MixinConfigs: chestcavity.mixins.json
+Implementation-Version: 1.0-1.16.5
+Specification-Vendor: examplemodsareus
+Specification-Title: chestcavity
+Implementation-Timestamp: 2023-05-03T18:37:04-0600
+Specification-Version: 1
+Implementation-Vendor: examplemodsareus
+

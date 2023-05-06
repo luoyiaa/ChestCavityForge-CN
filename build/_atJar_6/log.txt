@@ -1,0 +1,5 @@
+Args: "--inJar", "/Users/booneldan/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.16.5-36.2.39/forge-1.16.5-36.2.39-injected.jar", "--outJar", "/Users/booneldan/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.16.5-36.2.39_mapped_official_1.16.5/forge-1.16.5-36.2.39_mapped_official_1.16.5.jar", "--logFile", "accesstransform.log", "--atFile", "/Users/booneldan/Desktop/Minecraft Modding/ChestCavityForge1.16.5Test2/build/_atJar_6/parent_at.cfg"
+Classpath: /Users/booneldan/.gradle/caches/forge_gradle/maven_downloader/net/minecraftforge/accesstransformers/1.0.5/accesstransformers-1.0.5-fatjar.jar
+WorkDir: /Users/booneldan/Desktop/Minecraft Modding/ChestCavityForge1.16.5Test2/build/_atJar_6
+Main: net.minecraftforge.accesstransformer.TransformerProcessor
+====================================
