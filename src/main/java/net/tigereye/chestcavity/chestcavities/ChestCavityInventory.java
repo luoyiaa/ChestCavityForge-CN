@@ -7,7 +7,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.nbt.ListNBT;
 import net.tigereye.chestcavity.chestcavities.instance.ChestCavityInstance;
-
 public class ChestCavityInventory extends Inventory {
 
     ChestCavityInstance instance;
