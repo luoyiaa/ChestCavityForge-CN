@@ -586,10 +586,10 @@ public class ChestCavityUtil {
     public static void outputOrganScoresString(Consumer<String> output, ChestCavityInstance cc){
         try {
             ITextComponent name = cc.owner.getDisplayName();
-            output.accept("[Chest Cavity] 显示 " + name.getString() +"的器官评分:");
+            output.accept("%5BChest%20Cavity%5D%20\u663E\u793A%20" + name.getString() +"\u7684\u5668\u5B98\u8BC4\u5206%3A");
         }
         catch(Exception e){
-            output.accept("[Chest Cavity] 显示器官评分:");
+            output.accept("%5BChest%20Cavity%5D%20\u663E\u793A\u5668\u5B98\u8BC4\u5206%3A");
         }
         cc.getOrganScores().forEach((key, value) ->
                 output.accept(key.getPath() + ": " + value + " "));

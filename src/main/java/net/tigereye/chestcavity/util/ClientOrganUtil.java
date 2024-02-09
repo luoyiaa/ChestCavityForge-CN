@@ -8,10 +8,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.TranslationTextComponent;
+import net.minecraft.util.text.*;
 import net.minecraft.world.World;
 import net.tigereye.chestcavity.ChestCavity;
 import net.tigereye.chestcavity.interfaces.ChestCavityEntity;
@@ -86,17 +83,17 @@ public class ClientOrganUtil { //I moved the code that is ran on the server to C
 
 
         if(EnchantmentHelper.getItemEnchantmentLevel(CCEnchantments.MALPRACTICE.get(),itemStack) > 0){
-            textString = "不可安全使用";
+            textString = "\u4E0D\u53EF\u5B89\u5168\u4F7F\u7528";
         }
         else if (tag != null && tag.contains(ChestCavity.COMPATIBILITY_TAG.toString())
                 && EnchantmentHelper.getItemEnchantmentLevel(CCEnchantments.O_NEGATIVE.get(),itemStack) <= 0) {
             tag = tag.getCompound(ChestCavity.COMPATIBILITY_TAG.toString());
             String name = tag.getString("name");
             //tooltip.add(new StringTextComponent("OrganOwnerCC: "+tag.getUUID("owner")));
-            textString = "仅适用于: "+name;//+" ("+compatLevel+" compat)";
+            textString = "\u4EC5\u9002\u7528\u4E8E%3A%20"+name;//+" ("+compatLevel+" compat)";
         }
         else{
-            textString = "可安全使用";
+            textString = "\u53EF\u5B89\u5168\u4F7F\u7528";
         }
 
         StringTextComponent text = new StringTextComponent("");

@@ -1,4 +1,4 @@
-﻿package net.tigereye.chestcavity;
+package net.tigereye.chestcavity;
 
 
 import me.shedaniel.autoconfig.AutoConfig;
@@ -35,8 +35,8 @@ public class ChestCavity {
 	};
 
 	public ChestCavity() {
-		LOGGER.info("构建 Chest Cavity 模组，开始加载序列!");
-		printOnDebug("Chest Cavity 模组构建完成!");
+		LOGGER.info("\u6784\u5EFA%20Chest%20Cavity%20\u6A21\u7EC4\uFF0C\u5F00\u59CB\u52A0\u8F7D\u5E8F\u5217%21");
+		printOnDebug("Chest%20Cavity%20\u6A21\u7EC4\u6784\u5EFA\u5B8C\u6210%21");
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		bus.addListener(this::setup);
 		bus.addListener(this::doClientStuff);
