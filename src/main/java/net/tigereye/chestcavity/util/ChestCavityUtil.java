@@ -339,7 +339,7 @@ public class ChestCavityUtil {
             }
         }
         catch(IllegalStateException e){
-            ChestCavity.LOGGER.warn(e.getMessage()+". Chest Cavity will attempt to calculate this default organ score later.");
+            ChestCavity.LOGGER.warn(e.getMessage()+"[Chest Cavity] 稍后将尝试计算此默认器官评分");
             return false;
         }
         return true;
@@ -586,10 +586,10 @@ public class ChestCavityUtil {
     public static void outputOrganScoresString(Consumer<String> output, ChestCavityInstance cc){
         try {
             ITextComponent name = cc.owner.getDisplayName();
-            output.accept("[Chest Cavity] Displaying " + name.getString() +"'s organ scores:");
+            output.accept("[Chest Cavity] 显示 " + name.getString() +"的器官评分:");
         }
         catch(Exception e){
-            output.accept("[Chest Cavity] Displaying organ scores:");
+            output.accept("[Chest Cavity] 显示器官评分:");
         }
         cc.getOrganScores().forEach((key, value) ->
                 output.accept(key.getPath() + ": " + value + " "));

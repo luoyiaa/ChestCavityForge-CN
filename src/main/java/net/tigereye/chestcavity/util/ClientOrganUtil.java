@@ -53,7 +53,7 @@ public class ClientOrganUtil { //I moved the code that is ran on the server to C
                 } else if (score >= -.75f) {
                     tier = "quality.chestcavity.greatly_reduces";
                 } else {
-                    tier = "cripples";
+                    tier = "残废";
                 }
             }
             TranslationTextComponent text = new TranslationTextComponent("organscore." + organ.getNamespace() + "." + organ.getPath(), new TranslationTextComponent(tier));
@@ -86,17 +86,17 @@ public class ClientOrganUtil { //I moved the code that is ran on the server to C
 
 
         if(EnchantmentHelper.getItemEnchantmentLevel(CCEnchantments.MALPRACTICE.get(),itemStack) > 0){
-            textString = "Unsafe to use";
+            textString = "不可安全使用";
         }
         else if (tag != null && tag.contains(ChestCavity.COMPATIBILITY_TAG.toString())
                 && EnchantmentHelper.getItemEnchantmentLevel(CCEnchantments.O_NEGATIVE.get(),itemStack) <= 0) {
             tag = tag.getCompound(ChestCavity.COMPATIBILITY_TAG.toString());
             String name = tag.getString("name");
             //tooltip.add(new StringTextComponent("OrganOwnerCC: "+tag.getUUID("owner")));
-            textString = "Only Compatible With: "+name;//+" ("+compatLevel+" compat)";
+            textString = "仅适用于: "+name;//+" ("+compatLevel+" compat)";
         }
         else{
-            textString = "Safe to Use";
+            textString = "可安全使用";
         }
 
         StringTextComponent text = new StringTextComponent("");

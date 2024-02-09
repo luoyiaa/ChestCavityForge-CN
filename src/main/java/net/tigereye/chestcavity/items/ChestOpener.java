@@ -81,10 +81,10 @@ public class ChestOpener extends Item {
 			else{
 				if(player.level.isClientSide) {
 					if (!target.getItemBySlot(EquipmentSlotType.CHEST).isEmpty()) {
-						player.sendMessage(new StringTextComponent("Target's chest is obstructed"), new UUID(100, 0));
+						player.sendMessage(new StringTextComponent("目标被阻挡"), new UUID(100, 0));
 						player.playNotifySound(SoundEvents.CHAIN_HIT, SoundCategory.PLAYERS, .75f, 1);
 					} else {
-						player.sendMessage(new StringTextComponent("Target is too healthy to open"),new UUID(100, 0));
+						player.sendMessage(new StringTextComponent("目标生命值过高"),new UUID(100, 0));
 						player.playNotifySound(SoundEvents.ARMOR_EQUIP_TURTLE, SoundCategory.PLAYERS, .75f, 1);
 					}
 				}

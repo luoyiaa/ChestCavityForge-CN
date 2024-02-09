@@ -23,7 +23,7 @@ public class CreeperAppendix extends Item {
     @Override
     public void appendHoverText(ItemStack itemStack, @Nullable World world, List<ITextComponent> tooltip, ITooltipFlag tooltipContext) {
         super.appendHoverText(itemStack,world,tooltip,tooltipContext);
-        tooltip.add(new StringTextComponent("This appears to be a fuse.").withStyle(TextFormatting.ITALIC));
-        tooltip.add(new StringTextComponent("It won't do much by itself.").withStyle(TextFormatting.ITALIC));
+        tooltip.add(new StringTextComponent("这似乎是一个导火索").withStyle(TextFormatting.ITALIC));
+        tooltip.add(new StringTextComponent("其本身没有任何作用").withStyle(TextFormatting.ITALIC));
     }
 }

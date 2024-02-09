@@ -1,4 +1,4 @@
-package net.tigereye.chestcavity;
+﻿package net.tigereye.chestcavity;
 
 
 import me.shedaniel.autoconfig.AutoConfig;
@@ -23,7 +23,7 @@ import org.apache.logging.log4j.Logger;
 @Mod(ChestCavity.MODID)
 public class ChestCavity {
 	public static final String MODID = "chestcavity";
-    private static final boolean DEBUG_MODE = false; //Make SURE that this is false when building
+	private static final boolean DEBUG_MODE = false; //Make SURE that this is false when building
 	public static final Logger LOGGER = LogManager.getLogger();
 	public static CCConfig config;
 	public static final ResourceLocation COMPATIBILITY_TAG = new ResourceLocation(MODID,"organ_compatibility");
@@ -35,8 +35,8 @@ public class ChestCavity {
 	};
 
 	public ChestCavity() {
-		LOGGER.info("ChestCavity mod created, starting the loading sequence!");
-		printOnDebug("ChestCavity mod created!");
+		LOGGER.info("构建 Chest Cavity 模组，开始加载序列!");
+		printOnDebug("Chest Cavity 模组构建完成!");
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		bus.addListener(this::setup);
 		bus.addListener(this::doClientStuff);
@@ -51,7 +51,7 @@ public class ChestCavity {
 		CCListeners.register();
 		CCStatusEffects.MOB_EFFECTS.register(bus);
 		CCTagOrgans.init();
-}
+	}
 
 	public void setup(FMLCommonSetupEvent event) {
 		NetworkHandler.init();
